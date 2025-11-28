@@ -2,24 +2,33 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Hapus dulu user lama (opsional, tapi aman kalau pakai migrate:fresh)
+        // User::truncate();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // USER ADMIN
+        User::create([
+            'name'     => 'Admin Sistem',
+            'email'    => 'admin@example.com',
+            'password' => bcrypt('admin123'), // wajib di-hash
+            'role'     => 'admin',            // pastikan ada kolom role di tabel users
+        ]);
+
+        // USER GURU/OPERATOR (opsional)
+        User::create([
+            'name'     => 'Guru 1',
+            'email'    => 'guru@example.com',
+            'password' => bcrypt('guru123'),
+            'role'     => 'guru',
         ]);
     }
 }
