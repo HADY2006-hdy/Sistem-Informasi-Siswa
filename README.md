@@ -1,105 +1,142 @@
-Sistem Informasi Siswa
+                                                                                               ****Sistem Informasi Siswa****
+Developed by: HADYNATA YUSUF PRATAMA 🎓🔥
+Sistem Informasi Siswa adalah aplikasi berbasis web yang mempermudah pengelolaan data siswa, menampilkan statistik kelas & gender, serta menyediakan dashboard modern yang dapat digunakan oleh admin maupun user (guru/staff).
 
-Sistem informasi sederhana berbasis Laravel 12 yang digunakan untuk mengelola data siswa, autentikasi user, role admin/user, pencarian data, dashboard modern, grafik siswa per tahun, dan mode gelap (Dark Mode).
+Website ini dirancang agar sederhana, cepat, modern, dan mudah digunakan oleh siapa saja.
 
-🚀 Fitur Utama
+👋 Apa itu Sistem Informasi Siswa?
 
-Login & Logout (Autentikasi)
+Sistem Informasi Siswa adalah aplikasi berbasis Laravel yang digunakan untuk:
 
-Role User: Admin & User
+Mengelola data siswa dengan mudah
 
-CRUD Data Siswa
+Menampilkan informasi siswa dalam bentuk tabel & statistik
 
-Pencarian siswa berdasarkan nama
+Menggunakan dashboard modern dan responsif
 
-Dashboard modern + statistik + grafik siswa
+Admin dapat mengelola data sepenuhnya
 
-Profil pengguna
+User biasa hanya dapat melihat data siswa
 
-Dark Mode
+Website ini dibuat untuk menjadi contoh aplikasi akademik sederhana yang bersih, modern, dan siap digunakan untuk kebutuhan sekolah atau latihan UAS/PWL/Pemrograman Web.
 
-Middleware role:admin
+🚀 Fitur apa saja yang tersedia?
+✔ Autentikasi Admin & User
 
-🛠️ Teknologi yang Digunakan
+Admin: full akses
 
-Laravel 12
+User: hanya melihat data
 
-PHP 8.2
+✔ CRUD Siswa
 
-Bootstrap 5
+Tambah siswa
 
-Chart.js
+Edit siswa
 
-MySQL
+Hapus siswa
 
-Blade Template Engine
+Lihat detail
 
-📥 Cara Instalasi & Menjalankan
+✔ Dashboard Modern
 
-Ikuti langkah berikut untuk menjalankan aplikasi dari awal:
+Total siswa
 
-1️⃣ Clone repository
-git clone https://github.com/HADY2006-hdy/Sistem-Informasi-Siswa.git
+Statistik siswa berdasarkan gender
 
-2️⃣ Masuk ke folder project
-cd Sistem-Informasi-Siswa
+Statistik jumlah siswa per kelas
 
-3️⃣ Install dependency Laravel
+✔ Dark Mode
+
+Mode gelap/terang untuk kenyamanan pengguna
+
+✔ Profil Pengguna
+
+Menampilkan informasi akun yang sedang login
+
+✔ Search Siswa
+
+Pencarian data siswa berdasarkan nama
+
+✔ Middleware Role
+
+Pembagian hak akses antara Admin & User
+
+📅 Release Date
+
+Release date: 29 November 2025
+Project ini dibuat dan dikembangkan oleh:
+✨ HADYNATA YUSUF PRATAMA ✨
+
+Jika kalian suka project ini, silakan kasih stars ⭐ di GitHub agar memberi semangat untuk update berikutnya!
+
+🔑 Default Account for Testing
+👑 Admin
+email: admin@gmail.com
+password: 12345678
+
+👤 User
+email: user@gmail.com
+password: 12345678
+
+🛠 Install
+
+Ikuti langkah berikut untuk menjalankan project:
+
+1. Clone Repository
+git clone https://github.com/your-username/Nama-Repository-Kamu.git
+cd Nama-Repository-Kamu
+
+2. Install Dependencies
 composer install
 
-4️⃣ Copy file environment
+3. Buat File Environment
 cp .env.example .env
 
-5️⃣ Generate key
-php artisan key:generate
-
-6️⃣ Buat database MySQL
-
-Buat database baru misalnya:
-
-nama database: sistem_siswa
-
-7️⃣ Atur koneksi database di .env
+4. Atur Database pada file .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
 DB_DATABASE=sistem_siswa
 DB_USERNAME=root
 DB_PASSWORD=
 
-8️⃣ Jalankan migrasi + seeder
+5. Generate App Key
+php artisan key:generate
+
+6. Migrasi Database
 php artisan migrate --seed
 
-
-Ini akan membuat:
-
-tabel users
-
-tabel siswas
-
-akun admin default
-
-9️⃣ Jalankan server Laravel
+7. Jalankan Aplikasi
 php artisan serve
 
 
-Aplikasi bisa diakses di:
-
+Buka browser:
 👉 http://127.0.0.1:8000
 
-🔐 Akun Login Default
-Admin
-
-Email: admin2@example.com
-Password: password
-
-User
-
-Email: user1@example.com
-Password: password
-
-🖥️ Screenshot
-
-Tambahkan screenshot sesuai kebutuhan.
-
 👨‍💻 Developer
+✨ HADYNATA YUSUF PRATAMA
 
-HADYNATA YUSUF PRATAMA
+Mahasiswa Informatika dengan passion di bidang Web Development.
+Membangun aplikasi ini dengan penuh cinta ❤️‍🔥 dan niat agar bisa membantu teman-teman memahami Laravel dengan lebih mudah.
 
+Instagram: @hadynata
+
+LinkedIn: Hadynata Yusuf Pratama
+
+🤝 Contributing
+
+Kontribusi sangat diterima!
+Silakan buat issues, pull request, atau tambahkan fitur baru seperti:
+
+Export data siswa ke PDF
+
+Upload foto siswa
+
+Role tambahan
+
+Sistem kelas & wali kelas
+
+📄 License
+
+Copyright © 2025
+Sistem Informasi Siswa is open-sourced software licensed under the MIT License.
