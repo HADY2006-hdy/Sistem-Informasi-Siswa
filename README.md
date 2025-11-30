@@ -1,5 +1,5 @@
-Sistem Informasi Siswa 
-
+Selamat Datang
+Sistem Informasi Siswa
 
 Sistem Informasi Siswa adalah aplikasi berbasis web yang mempermudah pengelolaan data siswa, menampilkan statistik kelas & gender, serta menyediakan dashboard modern yang dapat digunakan oleh admin maupun user (guru/staff).
 
