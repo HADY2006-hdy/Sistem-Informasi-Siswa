@@ -1,10 +1,12 @@
-📘 SISTEM INFORMASI SISWA — Web Akademik Sekolah
+# Sistem Informasi Siswa
 
-Sistem Informasi Siswa adalah aplikasi berbasis Laravel yang dirancang untuk membantu sekolah mengelola data siswa, guru, kelas, mata pelajaran, jadwal, dan nilai dengan mudah dan terstruktur.
+**Sistem Informasi Siswa adalah aplikasi berbasis Laravel yang dirancang untuk membantu sekolah mengelola data siswa, guru, kelas, mata pelajaran, jadwal, dan nilai dengan mudah dan terstruktur.
 
 Tujuan aplikasi ini: bikin pengelolaan data akademik lebih cepat, rapi, aman, dan lebih efisien, dengan tampilan modern serta fitur manajemen lengkap.
+---
 
-✨ Fitur Utama
+## ✨ Fitur Utama
+
 🧑‍🏫 Manajemen Siswa
 
 Tambah, edit, hapus, dan lihat detail siswa
@@ -44,111 +46,216 @@ Jumlah siswa per kelas
 Statistik gender
 
 Ringkasan data akademik sekolah
+---
 
-💻 Teknologi yang Digunakan
-Teknologi	Keterangan
-Laravel 10+	Framework utama backend
-PHP 8.2+	Bahasa pemrograman
-MySQL / MariaDB	Database aplikasi
-Blade Template	Tampilan UI
-Bootstrap 5	Styling & UI layout
-Chart.js	Statistik grafik dashboard
-Composer	Dependency manager Laravel
-🛠 Cara Clone & Menjalankan Sistem Informasi Siswa
+## 🧰 Teknologi yang Digunakan
 
-Langkah demi langkah (format sama dengan README AURA)
+* **Flutter** (Dart)
+* **Android SDK**
+* **SQLite** (`sqflite`)
+* **Shared Preferences**
+* `flutter_local_notifications`
+* `permission_handler`
 
-1️⃣ Install Git
+---
 
-Download Git:
-🔗 https://git-scm.com/downloads
+# 🛠 Cara Clone & Menjalankan AURA dari Nol (Langkah Demi Langkah)
 
-Cek instalasi:
+---
 
+## 1️⃣ Install Git
+
+Git dipakai untuk meng-clone (mengambil) source code dari GitHub.
+
+1. Download Git:
+   [https://git-scm.com/downloads](https://git-scm.com/downloads)
+2. Install Git seperti aplikasi biasa (Next → Next → Finish).
+3. Setelah selesai, cek apakah Git sudah terpasang:
+
+```bash
 git --version
+```
 
-2️⃣ Install Composer
+Kalau muncul versi (misal `git version 2.xx`), berarti Git sudah terinstall.
 
-Laravel butuh Composer untuk mengelola dependency.
+---
 
-Download di sini:
-🔗 https://getcomposer.org/download/
+## 2️⃣ Install Flutter SDK
 
-Cek:
+1. Buka panduan resmi Flutter:
+   [https://docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install)
+2. Download Flutter untuk **Windows** (atau OS kamu).
+3. Extract ke folder, misalnya:
 
-composer --version
+```text
+C:\src\flutter
+```
 
-3️⃣ Install PHP & XAMPP
+4. Tambahkan ke **PATH** (Windows):
 
-Download XAMPP:
-🔗 https://www.apachefriends.org/
+   * Cari di Start Menu → “Edit the system environment variables”
+   * Klik **Environment Variables**
+   * Di “User variables” → pilih `Path` → **Edit**
+   * Tambahkan entry baru:
 
-Wajib menggunakan PHP 8.2 atau lebih baru
+```text
+C:\src\flutter\bin
+```
 
-Aktifkan Apache & MySQL
+5. Cek Flutter di terminal / PowerShell:
 
-4️⃣ Clone Repository
+```bash
+flutter --version
+```
 
-Pilih folder, lalu jalankan:
+Kalau muncul info versi Flutter, berarti sudah siap.
 
-git clone https://github.com/HADY2006-hdy/Sistem-Informasi-Siswa.git
+---
 
+## 3️⃣ Install Android Studio & Android SDK
 
-Masuk ke folder:
+1. Download Android Studio:
+   [https://developer.android.com/studio](https://developer.android.com/studio)
+2. Install seperti biasa.
+3. Buka Android Studio → klik **More Actions** → **SDK Manager**.
+4. Pastikan ini tercentang:
 
-cd Sistem-Informasi-Siswa
+   * Android **API 36** (Android 14)
+   * Android SDK Platform-Tools
+   * Android SDK Build-Tools
+5. Masih di Android Studio, jalankan **SDK Manager** dari terminal (opsional):
 
-5️⃣ Install Dependency Laravel
-composer install
+```bash
+sdkmanager "platforms;android-36"
+```
 
-6️⃣ Copy File Environment
-cp .env.example .env
+---
 
+## 4️⃣ Cek Kesiapan Flutter
 
-Edit .env dan ubah konfigurasi database:
+Di terminal / PowerShell:
 
-DB_DATABASE=db_siswa
-DB_USERNAME=root
-DB_PASSWORD=
+```bash
+flutter doctor
+```
 
+Perintah ini akan memberi tahu kalau ada yang kurang (misalnya SDK belum lengkap).
+Ikuti saran yang muncul sampai hampir semua tanda ✔ (kecuali bagian yang memang tidak dipakai, seperti web/macos jika tidak perlu).
 
-Buat database di phpMyAdmin dengan nama: db_siswa
+---
 
-7️⃣ Generate Key Laravel
-php artisan key:generate
+## 5️⃣ Clone Repository AURA
 
-8️⃣ Migrasi Database & Seeder
-php artisan migrate --seed
+Sekarang kita ambil source code AURA dari GitHub.
 
+1. Pilih folder di laptop kamu, misalnya `C:\Users\ASUS\Downloads\AURA`
+2. Buka terminal di folder tersebut, lalu jalankan:
 
-Seeder akan membuat akun admin otomatis.
+```bash
+git clone https://github.com/Reinerbroww/AURA-Auto-Reminder-Aplication-.git
+```
 
-🔐 Default Login Admin
+3. Masuk ke folder project:
 
-Email: admin@gmail.com
+```bash
+cd AURA-Auto-Reminder-Aplication-
+```
 
-Password: 12345678
+---
 
-9️⃣ Jalankan Server Laravel
-php artisan serve
+## 6️⃣ Install Dependency Flutter
 
+Masih di folder project (yang ada file `pubspec.yaml`), jalankan:
 
-Akses melalui browser:
+```bash
+flutter pub get
+```
 
-http://127.0.0.1:8000
+Perintah ini akan mengunduh semua package yang dibutuhkan AURA (notifikasi, database, dll).
 
-🔧 Perintah Tambahan (Jika Error)
-Bersihkan Cache Laravel:
-php artisan optimize:clear
+---
 
-Jika tampilan tidak berubah:
-php artisan view:clear
+## 7️⃣ Hubungkan HP Android ke Laptop
 
-Jika migration bermasalah:
-php artisan migrate:fresh --seed
+Ada dua opsi: **pakai HP asli** atau **emulator**.
 
-👨‍💻 Developer
+### ✅ Kalau pakai HP asli:
 
-Hadinata Yusuf Pratama
-Developer Sistem Informasi Siswa
-Universitas Tadulako — Teknik Informatika
+1. Aktifkan **Developer Options**:
+
+   * Buka **Settings → About phone → Software information**
+   * Tekan **Build number** 7x sampai muncul “You are now a developer”
+2. Aktifkan **USB Debugging**:
+
+   * Settings → Developer Options → hidupkan **USB debugging**
+3. Sambungkan HP ke laptop pakai kabel data.
+4. Cek apakah HP terbaca Flutter:
+
+```bash
+flutter devices
+```
+
+Kalau ada nama device kamu di daftar, berarti HP siap dipakai.
+
+### ✅ Kalau pakai emulator (opsional):
+
+1. Buka Android Studio → **Device Manager**
+2. Tambah Virtual Device (AVD)
+3. Jalankan emulator
+4. Cek device:
+
+```bash
+flutter devices
+```
+
+---
+
+## 8️⃣ Jalankan AURA di HP / Emulator
+
+Masih di folder project AURA, jalankan:
+
+```bash
+flutter run
+```
+
+Kalau mau langsung mode **release** (lebih ringan & cepat):
+
+```bash
+flutter run --release
+```
+
+Flutter akan:
+
+* Build project,
+* Install APK ke HP/emulator,
+* Menjalankan aplikasi secara otomatis.
+
+---
+
+## 9️⃣ Perintah Tambahan Kalau Ada Error
+
+Kalau build error (misalnya setelah ganti kode atau update package), coba:
+
+```bash
+flutter clean
+flutter pub get
+flutter run
+```
+
+Kalau error terkait Gradle/SDK, pastikan:
+
+* `compileSdk` di `android/app/build.gradle.kts` sudah **36**
+* Android Studio sudah terinstall **API 36**
+
+---
+
+## 👨‍💻 Kontributor
+
+**Developer Utama:**
+
+* Reiner Dominicus Sakunab (Reinerbroww)
+
+**Support & Kontributor:**
+
+* HADYNATA YUSUF PRATAMA 
+* Melin Oktaviani
