@@ -1,229 +1,211 @@
-# AURA – Auto Reminder Application 🕒
+📘 SISTEM INFORMASI SISWA — Web Akademik Sekolah
 
-**AURA (Auto Reminder Application)** adalah aplikasi pengingat otomatis berbasis **Flutter** yang membantu pengguna mengatur jadwal, tugas, dan aktivitas harian.
-Tujuan AURA: bikin pengguna **lebih teratur**, **gak lupa jadwal**, dan tetap **produktif** dengan notifikasi yang terjadwal rapi.
+Sistem Informasi Siswa adalah aplikasi berbasis Laravel yang dirancang untuk membantu sekolah mengelola data siswa, guru, kelas, mata pelajaran, jadwal, dan nilai secara terstruktur.
 
----
+Tujuan aplikasi ini: bikin pengelolaan data akademik lebih cepat, lebih rapi, dan lebih efisien dengan tampilan modern dan fitur manajemen lengkap.
 
-## ✨ Fitur Utama
+✨ Fitur Utama
 
-* 🔔 Notifikasi pengingat terjadwal (menggunakan `flutter_local_notifications`)
-* 🌓 Tema **Dark Mode** & **Light Mode**
-* 📝 Tambah, edit, dan hapus pengingat
-* 💾 Penyimpanan lokal menggunakan **SQLite (sqflite)**
-* 📅 Mendukung Android terbaru (compileSdk 36)
-* 🔐 Izin notifikasi & alarm otomatis diminta saat aplikasi berjalan pertama kali
+🧑‍🎓 Manajemen Siswa (tambah, edit, hapus, lihat detail)
 
----
+👨‍🏫 Manajemen Guru
 
-## 🧰 Teknologi yang Digunakan
+🏫 Manajemen Kelas
 
-* **Flutter** (Dart)
-* **Android SDK**
-* **SQLite** (`sqflite`)
-* **Shared Preferences**
-* `flutter_local_notifications`
-* `permission_handler`
+📚 Manajemen Mata Pelajaran
 
----
+📅 Manajemen Jadwal Pelajaran
 
-# 🛠 Cara Clone & Menjalankan AURA dari Nol (Langkah Demi Langkah)
+📄 Input & Lihat Nilai Raport
 
----
+🔐 Autentikasi Admin & Role User
 
-## 1️⃣ Install Git
+🌙 Tema Dark Mode & Light Mode
 
-Git dipakai untuk meng-clone (mengambil) source code dari GitHub.
+📊 Dashboard Statistik (jumlah siswa per kelas, statistik gender, dsb)
 
-1. Download Git:
-   [https://git-scm.com/downloads](https://git-scm.com/downloads)
-2. Install Git seperti aplikasi biasa (Next → Next → Finish).
-3. Setelah selesai, cek apakah Git sudah terpasang:
+🧰 Teknologi yang Digunakan
 
-```bash
+Laravel 10+
+
+PHP 8.2+
+
+MySQL / MariaDB
+
+Blade Template
+
+Bootstrap 5
+
+Composer
+
+XAMPP / Laragon / WAMP
+
+🛠 Cara Clone & Menjalankan Sistem Informasi Siswa (Langkah Demi Langkah)
+1️⃣ Install Git
+
+Git dipakai untuk meng-clone source code dari GitHub.
+
+Download Git
+👉 https://git-scm.com/downloads
+
+Install Git seperti aplikasi biasa.
+
+Cek instalasi:
+
 git --version
-```
 
-Kalau muncul versi (misal `git version 2.xx`), berarti Git sudah terinstall.
 
----
+Kalau muncul versi, berarti berhasil.
 
-## 2️⃣ Install Flutter SDK
+2️⃣ Install Composer
 
-1. Buka panduan resmi Flutter:
-   [https://docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install)
-2. Download Flutter untuk **Windows** (atau OS kamu).
-3. Extract ke folder, misalnya:
+Composer digunakan untuk menginstall dependency Laravel.
 
-```text
-C:\src\flutter
-```
+Download di sini:
+👉 https://getcomposer.org/download/
 
-4. Tambahkan ke **PATH** (Windows):
+Setelah terinstall, cek:
 
-   * Cari di Start Menu → “Edit the system environment variables”
-   * Klik **Environment Variables**
-   * Di “User variables” → pilih `Path` → **Edit**
-   * Tambahkan entry baru:
+composer --version
 
-```text
-C:\src\flutter\bin
-```
+3️⃣ Install XAMPP / MySQL Server
 
-5. Cek Flutter di terminal / PowerShell:
+Karena aplikasi ini membutuhkan database MySQL.
 
-```bash
-flutter --version
-```
+Download XAMPP:
+👉 https://www.apachefriends.org/
 
-Kalau muncul info versi Flutter, berarti sudah siap.
+Nyalakan:
 
----
+✔ Apache
+✔ MySQL
 
-## 3️⃣ Install Android Studio & Android SDK
+4️⃣ Clone Repository Sistem Informasi Siswa
 
-1. Download Android Studio:
-   [https://developer.android.com/studio](https://developer.android.com/studio)
-2. Install seperti biasa.
-3. Buka Android Studio → klik **More Actions** → **SDK Manager**.
-4. Pastikan ini tercentang:
+Pilih folder di laptop kamu, misalnya:
 
-   * Android **API 36** (Android 14)
-   * Android SDK Platform-Tools
-   * Android SDK Build-Tools
-5. Masih di Android Studio, jalankan **SDK Manager** dari terminal (opsional):
+C:\Users\ASUS\Documents\Project-Sekolah
 
-```bash
-sdkmanager "platforms;android-36"
-```
 
----
+Clone repository:
 
-## 4️⃣ Cek Kesiapan Flutter
+git clone https://github.com/HADY2006-hdy/Sistem-Informasi-Siswa.git
 
-Di terminal / PowerShell:
 
-```bash
-flutter doctor
-```
+Masuk ke folder project:
 
-Perintah ini akan memberi tahu kalau ada yang kurang (misalnya SDK belum lengkap).
-Ikuti saran yang muncul sampai hampir semua tanda ✔ (kecuali bagian yang memang tidak dipakai, seperti web/macos jika tidak perlu).
+cd Sistem-Informasi-Siswa
 
----
+5️⃣ Install Dependency Laravel
 
-## 5️⃣ Clone Repository AURA
+Masih di dalam folder project:
 
-Sekarang kita ambil source code AURA dari GitHub.
+composer install
 
-1. Pilih folder di laptop kamu, misalnya `C:\Users\ASUS\Downloads\AURA`
-2. Buka terminal di folder tersebut, lalu jalankan:
 
-```bash
-git clone https://github.com/Reinerbroww/AURA-Auto-Reminder-Aplication-.git
-```
+Lalu buat file .env:
 
-3. Masuk ke folder project:
+cp .env.example .env
 
-```bash
-cd AURA-Auto-Reminder-Aplication-
-```
 
----
+Generate application key:
 
-## 6️⃣ Install Dependency Flutter
+php artisan key:generate
 
-Masih di folder project (yang ada file `pubspec.yaml`), jalankan:
+6️⃣ Setting Database
 
-```bash
-flutter pub get
-```
+Buka phpMyAdmin
 
-Perintah ini akan mengunduh semua package yang dibutuhkan AURA (notifikasi, database, dll).
+Buat database baru, misalnya:
 
----
+db_siswa
 
-## 7️⃣ Hubungkan HP Android ke Laptop
 
-Ada dua opsi: **pakai HP asli** atau **emulator**.
+Buka file .env lalu ubah:
 
-### ✅ Kalau pakai HP asli:
+DB_DATABASE=db_siswa
+DB_USERNAME=root
+DB_PASSWORD=
 
-1. Aktifkan **Developer Options**:
 
-   * Buka **Settings → About phone → Software information**
-   * Tekan **Build number** 7x sampai muncul “You are now a developer”
-2. Aktifkan **USB Debugging**:
+(Sesuaikan kalau kamu pakai password di MySQL)
 
-   * Settings → Developer Options → hidupkan **USB debugging**
-3. Sambungkan HP ke laptop pakai kabel data.
-4. Cek apakah HP terbaca Flutter:
+7️⃣ Migrasi Database + Seeder
 
-```bash
-flutter devices
-```
+Jalankan:
 
-Kalau ada nama device kamu di daftar, berarti HP siap dipakai.
+php artisan migrate --seed
 
-### ✅ Kalau pakai emulator (opsional):
 
-1. Buka Android Studio → **Device Manager**
-2. Tambah Virtual Device (AVD)
-3. Jalankan emulator
-4. Cek device:
+Seeder akan otomatis mengisi data awal seperti admin default.
 
-```bash
-flutter devices
-```
+8️⃣ Jalankan Aplikasi
 
----
+Masih di dalam folder project:
 
-## 8️⃣ Jalankan AURA di HP / Emulator
+php artisan serve
 
-Masih di folder project AURA, jalankan:
 
-```bash
-flutter run
-```
+Aplikasi bisa dibuka lewat browser:
 
-Kalau mau langsung mode **release** (lebih ringan & cepat):
+http://127.0.0.1:8000
 
-```bash
-flutter run --release
-```
+9️⃣ Login Akun Admin (Default)
 
-Flutter akan:
+Gunakan akun berikut:
 
-* Build project,
-* Install APK ke HP/emulator,
-* Menjalankan aplikasi secara otomatis.
+Email: admin@gmail.com
 
----
+Password: 12345678
 
-## 9️⃣ Perintah Tambahan Kalau Ada Error
+(Setara dengan versi open-source yang kamu modifikasi tadi)
 
-Kalau build error (misalnya setelah ganti kode atau update package), coba:
+🔧 Perintah Tambahan Kalau Error
 
-```bash
-flutter clean
-flutter pub get
-flutter run
-```
+Jika muncul error atau perubahan tidak tampil:
 
-Kalau error terkait Gradle/SDK, pastikan:
+php artisan optimize:clear
+php artisan migrate:fresh --seed
+php artisan serve
 
-* `compileSdk` di `android/app/build.gradle.kts` sudah **36**
-* Android Studio sudah terinstall **API 36**
 
----
+Jika ada masalah caching:
 
-## 👨‍💻 Kontributor
+php artisan config:clear
+php artisan cache:clear
 
-**Developer Utama:**
+📂 Struktur Folder
+Sistem-Informasi-Siswa/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+├── public/
+├── resources/
+│   ├── views/
+│   └── css/js assets
+├── routes/
+│   └── web.php
+├── .env
+├── composer.json
+└── README.md
 
-* Reiner Dominicus Sakunab (Reinerbroww)
+👨‍💻 Kontributor
 
-**Support & Kontributor:**
+Developer Utama:
 
-* Hadinata Yusuf Pratama
-* Melin Oktaviani
+Hadynata Yusuf Pratama
+
+Support & Kontributor:
+
+Reiner Dominicus Sakunab
+
+Melin Oktaviani
+
+📜 Lisensi (Opsional)
+
+MIT License
+Proyek bebas digunakan untuk pembelajaran & pengembangan.
