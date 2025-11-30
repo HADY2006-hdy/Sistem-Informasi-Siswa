@@ -1,106 +1,80 @@
-🏫 Sistem Informasi Siswa — Laravel 12
+Sistem Informasi Siswa 
 
-Sistem Informasi Siswa adalah aplikasi web berbasis Laravel 12 yang dirancang untuk membantu sekolah dalam mengelola data siswa secara modern, rapi, dan efisien.
+Aplikasi Sistem Informasi Siswa berbasis Laravel 12 yang dirancang untuk membantu sekolah dalam mengelola data siswa secara cepat, modern, dan efisien.
 
-Website ini menyediakan fitur manajemen siswa, autentikasi admin/user, statistik siswa otomatis, dark mode, dan tampilan dashboard modern yang mudah dipahami oleh semua pengguna.
-
-Dikembangkan oleh:
-
-🌟 Hadynata Yusuf Pratama
-
-Developer yang fokus pada pengalaman pengguna (UX), tampilan UI modern, serta fitur yang stabil dan mudah digunakan.
+Sistem ini dibangun untuk memberikan pengalaman penggunaan yang nyaman, tampilan elegan, serta fitur manajemen data siswa yang stabil dan mudah digunakan oleh admin maupun pengguna biasa.
 
 ✨ Fitur Utama
-👨‍🎓 Manajemen Data Siswa (CRUD)
+👨‍🏫 Manajemen Data Siswa (CRUD)
 
-Tambah, edit, hapus, dan lihat semua data siswa
+Tambah, edit, hapus, dan lihat data siswa
 
-Data siswa meliputi: Nama, NIS, Kelas, Gender, dan Alamat
+Atribut lengkap: Nama, NIS, Kelas, Gender, Alamat
 
-Sistem pencarian siswa berdasarkan nama
+Validasi otomatis saat input
 
-🔐 Autentikasi User
+Pencarian siswa berdasarkan nama
 
-Login dan Logout
+🔐 Autentikasi Aman (Login/Logout)
 
-Role:
+Role Admin (full akses CRUD)
 
-Admin → Full access CRUD
+Role User (hanya melihat data)
 
-User → Hanya melihat data
-
-Keamanan session Laravel
+Session-based authentication Laravel
 
 📊 Dashboard Statistik Modern
 
-Dashboard interaktif yang menampilkan:
+Statistik jumlah siswa berdasarkan gender
 
-Total jumlah siswa
+Statistik jumlah siswa berdasarkan kelas
 
-Statistik Gender (Laki-laki & Perempuan)
+Tampilan card interaktif
 
-Statistik jumlah siswa per kelas
+Layout modern berbasis Bootstrap & Icons
 
-Mode gelap (Dark Mode) & terang (Light Mode)
+🌙 Mode Terang & Gelap
 
-Tampilan UI elegan dan responsif
+Light mode untuk tampilan cerah
 
-🌙 Dark Mode / Light Mode
+Dark mode elegan untuk penggunaan malam
 
-Mode gelap untuk kenyamanan mata
-
-Mode terang untuk tampilan cerah
-
-Penyimpanan mode otomatis dalam session
-
-🔍 Pencarian Siswa
-
-Cari siswa berdasarkan nama
-
-Langsung update tabel tanpa reload halaman
+Mode tersimpan otomatis menggunakan session
 
 🎨 UI Modern & Clean
 
 Menggunakan Bootstrap 5
 
-Warna elegan + icon lucu
+Sidebar elegan & responsif
 
-Sidebar responsive & dashboard card clean
+Desain bersih, rapi, dan mudah digunakan
 
-Layout nyaman untuk admin sekolah
+📁 Teknologi yang Digunakan
+Teknologi	Keterangan
+Laravel 12	Framework utama
+PHP 8.x	Bahasa pemrograman
+MySQL / MariaDB	Database
+Bootstrap 5	UI Framework
+Blade Template Engine	Sistem templating Laravel
+Chart.js (opsional)	Grafik data
+🔧 Instalasi & Menjalankan Project
 
-🗂️ Struktur Project
-app/
- ├── Http/
- │    ├── Controllers/
- │    │    └── SiswaController.php
- │    └── Middleware/
-resources/
- ├── views/
- │    ├── layout.blade.php
- │    ├── dashboard.blade.php
- │    └── siswa/
- │         ├── index.blade.php
- │         ├── create.blade.php
- │         └── edit.blade.php
-routes/
- └── web.php
-public/
- └── assets
+Ikuti langkah berikut untuk meng-clone dan menjalankan project secara lokal.
 
-🚀 Cara Clone & Menjalankan Project
 1️⃣ Clone Repository
 git clone https://github.com/USERNAME/Sistem-Informasi-Siswa.git
+
+2️⃣ Masuk ke Folder Project
 cd Sistem-Informasi-Siswa
 
-2️⃣ Install Dependency Composer
+3️⃣ Install Semua Dependency Laravel
 composer install
 
-3️⃣ Copy & Atur File .env
+4️⃣ Buat File .env
 cp .env.example .env
 
 
-Buka file .env, sesuaikan database kamu:
+Lalu buka file .env dan sesuaikan bagian database:
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -109,45 +83,67 @@ DB_DATABASE=db_siswa
 DB_USERNAME=root
 DB_PASSWORD=
 
-4️⃣ Generate Laravel Key
+5️⃣ Generate Key Laravel
 php artisan key:generate
 
-5️⃣ Migrasi Database
+6️⃣ Migrasi Database
 php artisan migrate
 
-6️⃣ Jalankan Server
+
+Jika ingin sekaligus menambahkan akun awal:
+
+php artisan db:seed
+
+7️⃣ Jalankan Server
 php artisan serve
 
 
-Akses di browser:
+Akses melalui browser:
 👉 http://127.0.0.1:8000
 
-🔑 Akun Default (Testing)
-Admin
-Email: admin@gmail.com
-Password: 12345678
+📂 Struktur Folder
+Sistem-Informasi-Siswa/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   └── SiswaController.php
+│   │   └── Middleware/
+│   └── Models/
+│       └── Siswa.php
+├── public/
+│   └── assets/
+├── resources/
+│   ├── views/
+│   │   ├── layout.blade.php
+│   │   ├── dashboard.blade.php
+│   │   ├── profile.blade.php
+│   │   └── siswa/
+│   │       ├── index.blade.php
+│   │       ├── create.blade.php
+│   │       └── edit.blade.php
+├── routes/
+│   └── web.php
+├── database/
+│   └── migrations/
+└── README.md
 
-User
-Email: user@gmail.com
-Password: 12345678
+📸 Screenshot (Placeholder)
 
-🧑‍💻 Developer
-💫 Hadynata Yusuf Pratama
+Tambahkan screenshot web kamu nanti di sini bro:
 
-“Membangun sistem sekolah yang modern, cepat, dan mudah digunakan adalah tujuan saya. Semoga aplikasi ini membantu digitalisasi sekolah menuju arah yang lebih baik.”
+![Dashboard](assets/screenshots/dashboard.png)
+![Data Siswa](assets/screenshots/data_siswa.png)
+![Login Page](assets/screenshots/login.png)
 
-🤝 Kontribusi
+👨‍💻 Developer
+✨ Hadynata Yusuf Pratama
 
-Kontribusi sangat diterima!
+Sistem Informasi Siswa — Laravel 12
+Universitas Tadulako | Teknik Informatika
 
-Fork repo
+“Membangun sistem sekolah yang modern, efisien, dan mudah digunakan adalah misi saya. Semoga project ini bermanfaat dan terus berkembang.”
 
-Buat branch baru
+📜 Lisensi
 
-Tambahkan fitur
-
-Ajukan Pull Request
-
-📄 License
-
-Project ini menggunakan lisensi MIT License.
+MIT License
+Project ini bebas digunakan untuk pembelajaran dan pengembangan.
