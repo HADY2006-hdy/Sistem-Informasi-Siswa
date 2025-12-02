@@ -24,12 +24,6 @@ Statistik gender otomatis
 Statistik jumlah siswa per kelas
 
 
-👩‍🏫 Manajemen Guru
-
-CRUD guru
-
-Relasi guru ↔ mata pelajaran
-
 
 🏫 Manajemen Kelas
 
@@ -38,18 +32,6 @@ CRUD kelas
 Menampilkan daftar siswa dalam setiap kelas
 
 
-📚 Manajemen Mata Pelajaran
-
-CRUD mata pelajaran
-
-Relasi ke guru & jadwal
-
-
-🗓️ Manajemen Jadwal Pelajaran
-
-Tambah, edit, dan hapus jadwal
-
-Penjadwalan otomatis
 
 
 📊 Dashboard Statistik
@@ -205,7 +187,6 @@ Developer Utama
 HADYNATA YUSUF PRATAMA
 
 
-Support & Contributor
 
 Fidya Rahayu
 
